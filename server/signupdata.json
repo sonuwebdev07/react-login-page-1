@@ -1,0 +1,52 @@
+{
+  "signupdata": [
+    {
+      "id": 1,
+      "name": "Sonu",
+      "email": "Sonu@gmail.com",
+      "password": "Sonu@1998"
+    },
+    {
+      "name": "Vikash",
+      "email": "vikas@gmail.com",
+      "password": "Vikash@1998",
+      "id": 2
+    },
+    {
+      "name": "Amit",
+      "email": "ajay@gmail.com",
+      "password": "Sonu@123",
+      "id": 3
+    },
+    {
+      "name": "Raghuveer",
+      "email": "raghuveer@gmail.com",
+      "password": "raghuveer@123",
+      "id": 4
+    },
+    {
+      "name": "Ajay",
+      "email": "ajay@gmail.com",
+      "password": "Ajay@1995",
+      "id": 5
+    },
+    {
+      "name": "Ashu",
+      "email": "ashu@gmail.com",
+      "password": "Ashu@2005",
+      "id": 6
+    },
+    {
+      "name": "Dev",
+      "email": "dev@gmail.com",
+      "password": "dev@123",
+      "id": 7
+    },
+    {
+      "name": "Ramesh",
+      "email": "ramesh@gmail.com",
+      "password": "ramesh@123",
+      "id": 8
+    }
+  ]
+}
