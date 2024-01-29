@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
 const Signup = () => {
 
@@ -13,8 +14,6 @@ const Signup = () => {
         const container = document.getElementById("container");
         container.classList.remove("active");
     }
-    
-    const [message,setMessage]=useState('');
 
     const [state,setState]=useState({
         name:'',
@@ -32,13 +31,16 @@ const Signup = () => {
         axios.post("http://localhost:3004/signupdata",state)
         .then((res)=>{
             console.log(res);
-            setMessage("Details Received !")
+            toast.success("Account has been Created ! Congratulations")
         })
         .then((err)=>{
             console.log(err);
         })
     }
 
+    const preventDefault=(e)=>{
+        e.preventDefault();
+    }
 
 
   return (
@@ -47,6 +49,7 @@ const Signup = () => {
     <div className="form-container sign-up">
       <form onSubmit={saveData} method='post'>
         <h1>Create Account</h1>
+        <Toaster/>
         <div className="social-icons">
           <a href="/"><i className="fa-brands fa-google-plus-g"></i></a>
           <a href="/"><i className="fa-brands fa-facebook-f"></i></a>
@@ -54,7 +57,6 @@ const Signup = () => {
           <a href="/"><i className="fa-brands fa-linkedin-in"></i></a>
         </div>
         <span>or use your email for registeration</span>
-        {message?<div className='alert alert-primary'>{message}</div>:''}
         <input type="text" placeholder="Name" name='name' onChange={handler}/>
         <input type="email" placeholder="Email" name='email' onChange={handler}/>
         <input type="password" placeholder="password" name='password' onChange={handler}/>
@@ -74,7 +76,7 @@ const Signup = () => {
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="password" />
         <a href="/">Forget Your Password?</a>
-        <button>Sign In</button>
+        <button onClick={preventDefault}>Sign In</button>
       </form>
     </div>
     <div className="toggle-container">

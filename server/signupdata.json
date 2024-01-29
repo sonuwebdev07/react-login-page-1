@@ -47,6 +47,18 @@
       "email": "ramesh@gmail.com",
       "password": "ramesh@123",
       "id": 8
+    },
+    {
+      "name": "suresh",
+      "email": "suresh@example.com",
+      "password": "12345678",
+      "id": 9
+    },
+    {
+      "name": "Vivek",
+      "email": "vivek@example.com",
+      "password": "12345678",
+      "id": 10
     }
   ]
 }
